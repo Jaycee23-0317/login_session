@@ -10,7 +10,8 @@
         <title>Login</title>
     </head>
     <body>
-        <h2 style="margin-left:10rem; margin-top:5rem;">Enter Username and Password</h2> 
+        <h2 style="margin-left:4rem; 
+                margin-top:5rem;">Enter Username and Password</h2> 
         <?php
             $msg = '';
             $users = ['user'=>"test", "manager"=>"secret", "Bimbooopss"=>"Homies12345."];
@@ -37,7 +38,13 @@
 
         <h4 style="margin-left:10rem; color:red;"><?php echo $msg; ?></h4>
         <br/><br/>
-            <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+            <form style="border: 3px solid #555555;
+                    margin: 50px;
+                    padding: 100px;
+                    width: 160;
+                    height: 75;" 
+                action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" 
+                method="post">
                 <div>
                     <label for="username">Username:</label>
                     <input type="text" name="username" id="name">
@@ -46,13 +53,13 @@
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password">
                 </div>
-                <section style="margin-left:2rem;">
+                <section style="margin-left:0rem;">
                     <button type="submit" name="login">Login</button>
                 </section>
             </form>
 
-            <p style="margin-left: 2rem;"> 
-                <a href = "logout.php" title = "Logout">Click here to clean Session.</a>
+            <p style="margin-left: 170px;"> 
+                <a href = "logout.php" title = "Logout"> click to log out </a>
             </p>
             </div> 
     </body>
